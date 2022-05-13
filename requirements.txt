@@ -1,0 +1,8 @@
+numpy
+validators
+matplotlib
+pytorch
+torchvision
+pillow
+requests
+tqdm
