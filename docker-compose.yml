@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  neural:
+    image: daniinxorchenabo/ded_moroz_classification_challenge2022:latest
+    build:
+      context: .
+    command: python code/demonstration.py
+
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+
+
