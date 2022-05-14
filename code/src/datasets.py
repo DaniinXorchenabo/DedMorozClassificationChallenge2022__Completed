@@ -7,8 +7,8 @@ from torch.utils.data import DataLoader, Subset
 ROOT_DIR = '../../data/raw_data'
 VALID_SPLIT = 0.1
 IMAGE_SIZE = 224  # Image size of resize when applying transforms.
-BATCH_SIZE = 30
-NUM_WORKERS = 4  # Number of parallel processes for data preparation.
+BATCH_SIZE = 15  # 30
+NUM_WORKERS = 2  # Number of parallel processes for data preparation.
 
 
 # Training transforms

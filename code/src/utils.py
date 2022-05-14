@@ -11,7 +11,7 @@ def save_model(epochs, model, optimizer, criterion, pretrained, filename: list[s
     """
     Function to save the trained model to disk.
     """
-    os.makedirs(join("..", "outputs", *filename[:-1]), exist_ok=True)
+    os.makedirs(join("../../test1", "outputs", *filename[:-1]), exist_ok=True)
     torch.save(
         {
             'epoch': epochs,
@@ -19,7 +19,7 @@ def save_model(epochs, model, optimizer, criterion, pretrained, filename: list[s
             'optimizer_state_dict': optimizer.state_dict(),
             'loss': criterion,
         },
-        join("..", "outputs", *filename)
+        join("../../test1", "outputs", *filename)
     )
 
 
@@ -28,7 +28,7 @@ def save_plots(train_acc, valid_acc, train_loss, valid_loss, pretrained, file_pa
     Function to save the loss and accuracy plots to disk.
     """
 
-    base_file_path = join("..", "outputs", *file_path)
+    base_file_path = join("../../test1", "outputs", *file_path)
 
     # accuracy plots
     plt.figure(figsize=(10, 7))

@@ -4,9 +4,9 @@ import torch.nn as nn
 import torch.optim as optim
 import time
 from tqdm.auto import tqdm
-from model import build_model
-from datasets import get_datasets, get_data_loaders
-from utils import save_model, save_plots, draw_loss_matrix
+from src.model import build_model
+from src.datasets import get_datasets, get_data_loaders
+from src.utils import save_model, save_plots, draw_loss_matrix
 import os
 from datetime import datetime
 
@@ -71,6 +71,7 @@ def validate(model, testloader, criterion, device):
     valid_running_correct = 0
     counter = 0
     res_matrix: dict[int, dict[int, int]] = dict()
+
     with torch.no_grad():
         for i, data in tqdm(enumerate(testloader), total=len(testloader)):
             counter += 1
@@ -100,6 +101,7 @@ def validate(model, testloader, criterion, device):
             _, preds = torch.max(outputs.data, 1)
             valid_running_correct += (preds == labels).sum().item()
 
+    print()
     code_to_image_class_name: dict[int, str] = {v: k for k, v in testloader.dataset.dataset.class_to_idx.items()}
     res_matrix: dict[str, dict[str, int]] = {code_to_image_class_name[k1]: {code_to_image_class_name[k2]: v2 for k2, v2 in v1.items()} for k1, v1 in res_matrix.items()}
 
@@ -124,7 +126,7 @@ if __name__ == '__main__':
         help='Whether to use pretrained weights or not'
     )
     model_filename = input("\nВведите путь и имя файла, в котором хранятся веса модели (или пустую стоку) \n")
-    if bool(model_filename) and os.path.isfile(model_filename := os.path.join("..", "outputs", model_filename)):
+    if bool(model_filename) and os.path.isfile(model_filename := os.path.join("../../test1", "outputs", model_filename)):
         print(f"Будет использоваться файл весов: {model_filename}")
     else:
         model_filename = None

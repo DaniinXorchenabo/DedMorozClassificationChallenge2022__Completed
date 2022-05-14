@@ -1,27 +1,21 @@
-import torch
 import argparse
 import torch.nn as nn
-import torch.optim as optim
-import time
-from tqdm.auto import tqdm
-from model import build_model
-from datasets import get_datasets, get_data_loaders, get_valid_transform, IMAGE_SIZE, ROOT_DIR, BATCH_SIZE, NUM_WORKERS
-from test1.src.train import train, validate
-from utils import save_model, save_plots, draw_loss_matrix
-import os
-from datetime import datetime
-
-from test1.src.datasets import get_datasets, get_data_loaders
-from test1.src.model import build_model
 import torch
-from torchvision import datasets, transforms
+from torchvision import datasets
 from torch.utils.data import DataLoader, Subset
+
+from src.datasets import get_valid_transform, IMAGE_SIZE, ROOT_DIR, BATCH_SIZE, NUM_WORKERS
+from src.train import validate
+from src.utils import draw_loss_matrix
+
+from src.model import build_model
+
 
 if __name__ == '__main__':
 
     # construct the argument parser
     parser = argparse.ArgumentParser()
-    model_filename = "../outputs/test1_b3/best_acc.pth"
+    model_filename = "../../test1/outputs/test1_b3/best_acc.pth"
 
     # Load the training and validation datasets.
     # dataset_train, dataset_valid, dataset_classes = get_datasets(True, valid_split=1)

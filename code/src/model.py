@@ -6,6 +6,7 @@ from torchvision.models.efficientnet import model_urls
 
 
 def build_model(pretrained=True, fine_tune=True, num_classes=10, filename: str | None = None):
+    num_classes = 15
     if pretrained:
         print('[INFO]: Loading pre-trained weights')
     else:
