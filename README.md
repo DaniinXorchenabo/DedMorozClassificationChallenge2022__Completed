@@ -17,7 +17,13 @@ git clone https://github.com/DaniinXorchenabo/DedMorozClassificationChallenge202
 cd DedMorozClassificationChallenge2022__Completed
 ```
 
-4. Create a environ variables file:
+4. Download weights
+   
+   Url for downloading will add in the future.
+   
+   Move the weights file to `weights` directory and rename to `final_network.pth` 
+
+5. Create a environ variables file:
    1. Copied a `example.env` file and paste as a `.env` file.
    2. Open `.env`
    3. Set `DATA_PATH` as path to validate data
@@ -26,11 +32,11 @@ cd DedMorozClassificationChallenge2022__Completed
        
        Or this file structure, `DATA_PATH=data/testing`
        
-5. Pulling image
+6. Pulling image
    
    ```docker pull daniinxorchenabo/ded_moroz_classification_challenge2022:latest ```
 
-6. Run demonstration script
+7. Run demonstration script
    ```docker-compose up ```
 
 ## Run with python interpreter
@@ -47,7 +53,13 @@ git clone https://github.com/DaniinXorchenabo/DedMorozClassificationChallenge202
 cd DedMorozClassificationChallenge2022__Completed
 ```
 
-3. Create and activate python virtual environment
+3. Download weights
+   
+   Url for downloading will add in the future.
+   
+   Move the weights file to `weights` directory and rename to `final_network.pth` 
+
+4. Create and activate python virtual environment
 
 ```bash
 python -m venv venv
