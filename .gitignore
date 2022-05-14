@@ -2,3 +2,6 @@
 /**/venv/**/*
 /**/.idea/**/*
 /**/__pycache__/**/*
+/**/outputs/**/*
+/**/.env
+*.pth
