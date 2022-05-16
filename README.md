@@ -19,7 +19,7 @@ cd DedMorozClassificationChallenge2022__Completed
 
 4. Download weights
    
-   Url for downloading will add in the future.
+   [https://drive.google.com/file/d/1KsotujU1g2Yi2ivbUJuwo5fPWq_pBwzD/view?usp=sharing](https://drive.google.com/file/d/1KsotujU1g2Yi2ivbUJuwo5fPWq_pBwzD/view?usp=sharing)
    
    Move the weights file to `weights` directory and rename to `final_network.pth` 
    
@@ -64,7 +64,7 @@ cd DedMorozClassificationChallenge2022__Completed
 
 3. Download weights
    
-   Url for downloading will add in the future.
+      [https://drive.google.com/file/d/1KsotujU1g2Yi2ivbUJuwo5fPWq_pBwzD/view?usp=sharing](https://drive.google.com/file/d/1KsotujU1g2Yi2ivbUJuwo5fPWq_pBwzD/view?usp=sharing)
    
    Move the weights file to `weights` directory and rename to `final_network.pth` 
    
